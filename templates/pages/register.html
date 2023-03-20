@@ -1,0 +1,17 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{%block title%}Register{%endblock title%}
+{%block style%}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{%endblock style%}
+{% block content%}
+    <form method="post" class="position-relative p-2 mt-5">
+        {% csrf_token %}
+            {{ form.as_p }} 
+        <input type="submit" value="Register" id="inscrire" class="btn btn-primary position-absolute p-2 mt-5  top-99 start-50 translate-middle">
+    </form>
+{% endblock content%}
+{% block scripts %} 
+    
+{%endblock scripts%}
